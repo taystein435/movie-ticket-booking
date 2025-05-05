@@ -2,7 +2,6 @@ import {
   View,
   Text,
   Animated,
-  Image,
   SafeAreaView,
   StyleSheet,
   TouchableOpacity,
@@ -10,6 +9,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import { useRouter } from 'expo-router';
+import { Image } from "expo-image";
+
 const {width, height} = Dimensions.get('window');
 
 const onBoardings = [
@@ -18,26 +19,26 @@ const onBoardings = [
     title: 'Order for food',
     description:
       'Place your food orders from amazing chefs in your neighbourhood',
-    img: require('../helpers/images/onboard1.png'),
+    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {    btn: 'Skip',
     title: 'Scheduled Ordering',
     description:
       'Schedule your food orders and carry on  with your day. We’ll deliver at the time its needed ',
-    img: require('../helpers/images/onboard2.png'),
+    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     btn: 'Skip',
     title: 'Swift Delivery',
     description: 'Receive your food order in less than 1 hour! ',
-    img: require('../helpers/images/onboard3.png'),
+    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     btn: 'Get started',
     title: 'Order Tracking',
     description:
       'Real-time tracking will keep you posted about your order process.',
-    img: require('../helpers/images/onboard4.png'),
+    img:"https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 

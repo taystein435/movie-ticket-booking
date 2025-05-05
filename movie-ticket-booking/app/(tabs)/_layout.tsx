@@ -38,7 +38,7 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) =><MaterialCommunityIcons name="airplane-search" size={24} color={color} />
+          tabBarIcon: ({ color }) =><MaterialCommunityIcons name="movie-search" size={24} color={color} />
         }}
       />
           <Tabs.Screen
