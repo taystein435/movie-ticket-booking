@@ -16,7 +16,7 @@ type rowProps = {
 const Row = ({name,dataA}:rowProps) => {
   return (
 <View>
-    <Text>{name}</Text>
+    <Text className="text-white text-2xl font-bold p-2">{name}</Text>
          <FlatList
            data={dataA}
            keyExtractor={(item) => item.id.toString()}
