@@ -13,49 +13,49 @@ const profileData = [
     icon: <MaterialCommunityIcons name="account" size={24} color="white" />,
   },
   {
+    id: 2,
+    title: "Email",
+    description: "taiwo@example.com",
+    icon: <MaterialCommunityIcons name="email" size={24} color="white" />,
+  },
+  {
     id: 3,
-    title: "Height",
-    description: "5'10\"",
-    icon: <MaterialCommunityIcons name="human-male-height" size={24} color="white" />,
+    title: "Favorite Genre",
+    description: "Action",
+    icon: <MaterialCommunityIcons name="movie-open" size={24} color="white" />,
   },
   {
     id: 4,
-    title: "Weight",
-    description: "75 kg",
-    icon: <MaterialCommunityIcons name="weight-kilogram" size={24} color="white" />,
+    title: "Tickets Purchased",
+    description: "24",
+    icon: <MaterialCommunityIcons name="ticket-confirmation" size={24} color="white" />,
   },
   {
     id: 5,
-    title: "Workouts Completed",
-    description: "56",
-    icon: <MaterialCommunityIcons name="run-fast" size={24} color="white" />,
+    title: "Loyalty Points",
+    description: "1,250",
+    icon: <MaterialCommunityIcons name="star-circle" size={24} color="white" />,
   },
   {
     id: 6,
-    title: "Calories Burned",
-    description: "3500 kcal",
-    icon: <MaterialCommunityIcons name="fire" size={24} color="white" />,
+    title: "Favorite Cinema",
+    description: "Odeon Greenwich",
+    icon: <MaterialCommunityIcons name="theater" size={24} color="white" />,
   },
   {
     id: 7,
-    title: "Steps Taken",
-    description: "120,000 steps",
-    icon: <MaterialCommunityIcons name="walk" size={24} color="white" />,
-  },
-
-  {
-    id: 9,
-    title: "Distance Covered",
-    description: "100 km",
-    icon: <MaterialCommunityIcons name="map-marker-distance" size={24} color="white" />,
+    title: "Membership Tier",
+    description: "Gold",
+    icon: <MaterialCommunityIcons name="medal" size={24} color="white" />,
   },
   {
-    id: 10,
-    title: "Active Hours",
-    description: "6 hours",
-    icon: <MaterialCommunityIcons name="clock" size={24} color="white" />,
+    id: 8,
+    title: "Last Movie Watched",
+    description: "Dune: Part Two",
+    icon: <MaterialCommunityIcons name="filmstrip" size={24} color="white" />,
   },
 ];
+
 
 const Account = () => {
   return (
@@ -65,7 +65,7 @@ const Account = () => {
         <Text className='text-2xl font-bold text-white'>Profile</Text>
       </View>
       <Image 
-        style={{ marginVertical:25,height: 100, width: 100, borderRadius: 50 ,display:'flex',alignSelf:"center"}}
+        style={{borderColor:'#80013f',borderWidth:3, marginVertical:25,height: 100, width: 100, borderRadius: 50 ,display:'flex',alignSelf:"center"}}
         source="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop&q=60"
         contentFit="cover"
       />
