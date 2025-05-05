@@ -16,30 +16,34 @@ const {width, height} = Dimensions.get('window');
 const onBoardings = [
   {
     btn: 'Skip',
-    title: 'Order for food',
+    title: 'Instant Ticket Delivery',
     description:
-      'Place your food orders from amazing chefs in your neighbourhood',
-    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
-  },
-  {    btn: 'Skip',
-    title: 'Scheduled Ordering',
-    description:
-      'Schedule your food orders and carry on  with your day. We’ll deliver at the time its needed ',
-    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
-  },
-  {
-    btn: 'Skip',
-    title: 'Swift Delivery',
-    description: 'Receive your food order in less than 1 hour! ',
-    img: "https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
+      'Get your e-tickets delivered instantly after booking — no printing, just scan and go!',
+    img: "https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     btn: 'Get started',
-    title: 'Order Tracking',
+    title: 'Live Show Updates',
     description:
-      'Real-time tracking will keep you posted about your order process.',
-    img:"https://images.unsplash.com/photo-1470468969717-61d5d54fd036?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGd5bXxlbnwwfHwwfHx8MA%3D%3D",
+      'Stay updated with real-time changes, delays, or alerts for your booked movies.',
+    img: "https://images.unsplash.com/photo-1560109947-543149eceb16?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D",
   },
+  {
+    btn: 'Skip',
+    title: 'Book in Advance',
+    description:
+      'Plan your movie nights by booking tickets ahead of time. Skip the queues and enjoy a smooth experience.',
+    img: "https://plus.unsplash.com/premium_photo-1683740128965-ece94ae27588?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    btn: 'Get started',
+    title: 'Discover Movies',
+    description:
+      'Browse trending films and explore what’s playing in your favorite theaters around you.',
+    img: "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+
+
 ];
 
 const OnBoarding = () => {
@@ -79,10 +83,10 @@ const OnBoarding = () => {
               style={{flex: 2, alignItems: 'center', justifyContent: 'center'}}>
               <Image
                 source={item.img}
-                resizeMode="contain"
                 style={{
-                  width: width * 0.3,
-                  height: height * 0.3,
+                  width: width ,
+                  height: height,
+                 
                 }}
               />
             </View>
@@ -96,9 +100,9 @@ const OnBoarding = () => {
               }}>
               <Text
                 style={{
-                  fontWeight: 700,
-                  color: 'black',
-                  fontSize: 19,
+                  fontWeight: 'bold',
+                  color: 'white',
+                  fontSize: 30,
                   fontFamily: 'Poppins',
                   textAlign: 'center',
                 }}>
@@ -108,11 +112,11 @@ const OnBoarding = () => {
               <Text
                 style={{
                   fontWeight: 400,
-                  fontSize: 14,
+                  fontSize: 15,
                   fontFamily: 'Poppins',
                   textAlign: 'center',
                   marginTop: 8,
-                  color: 'black',
+                  color: 'white',
                 }}>
                 {item.description}
               </Text>
@@ -125,7 +129,7 @@ const OnBoarding = () => {
                 bottom: '7%',
                 width: width * 0.7,
                 height: height * 0.065,
-                backgroundColor: 'white',
+                backgroundColor: '#80013f',
                 justifyContent: 'center',
                 alignItems: 'center',
                 borderRadius: 5,

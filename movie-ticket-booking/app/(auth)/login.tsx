@@ -30,7 +30,7 @@ const Login = () => {
       />
     
       <TouchableOpacity onPress={() => router.navigate("/(tabs)")}>
-          <View         style={{marginTop:30 ,width:width*0.98, alignSelf: "center",}} className="h-14 bg-[#00d3d8] rounded justify-center items-center ">
+          <View         style={{marginTop:30 ,width:width*0.98, alignSelf: "center",}} className="h-14 bg-[#80013f] rounded justify-center items-center ">
             <Text className="text-white font-extrabold  text-xl ">Log in</Text>
           </View>
         </TouchableOpacity>
