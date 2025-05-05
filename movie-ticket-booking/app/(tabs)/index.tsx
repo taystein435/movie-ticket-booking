@@ -12,7 +12,7 @@ const index = () => {
       <View className="flex-row items-center justify-between p-3">
         <View className="flex-row gap-2">
           <Image
-            style={{ height: 50, width: 50, borderRadius: 50 }}
+            style={{ height: 50, width: 50, borderRadius: 50 ,borderColor:'#80013f',borderWidth:3,}}
             source="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop&q=60"
             contentFit="cover"
           />
