@@ -76,8 +76,8 @@ const Account = () => {
         <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15, marginTop:10,paddingHorizontal:30 }}>
           {item.icon}
           <View style={{ marginLeft: 10 }}>
-            <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{item.title}</Text>
-            <Text>{item.description}</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold' ,color:'white'}}>{item.title}</Text>
+            <Text className="text-gray-400" style={{ fontSize: 14, color: 'white' }}>{item.description}</Text>
           </View>
         </View>
       )}
