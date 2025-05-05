@@ -1,6 +1,8 @@
 {
   "expo": {
-    "name": "frontend",
+    "name": "Movie Ticket Booking",
+    "slug": "movie-ticket-booking",
+    "version": "1.0.0",
     "slug": "frontend",
     "version": "1.0.0",
     "orientation": "portrait",
