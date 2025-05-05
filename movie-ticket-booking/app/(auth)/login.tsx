@@ -8,8 +8,8 @@ const Login = () => {
   const [text, setText] = useState("");
  const router = useRouter();
   return (
-    <SafeAreaView className=" flex-1 justify-center">
-      <Text className='text-center text-3xl font-bold'>Welcome</Text>
+    <SafeAreaView className=" flex-1 justify-center bg-black">
+      <Text className='text-center text-3xl font-bold text-white'>Welcome</Text>
       <TextInput
         mode="outlined"
         activeOutlineColor="black"
