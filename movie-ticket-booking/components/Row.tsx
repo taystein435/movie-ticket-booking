@@ -29,9 +29,6 @@ const Row = ({name,dataA}:rowProps) => {
               contentFit="cover"
               transition={1000}
             />       
-               <Text className="absolute bottom-16  font-bold text-white text-3xl px-4">
-                {item.title}
-               </Text>
                 </View>
            )}
          />
