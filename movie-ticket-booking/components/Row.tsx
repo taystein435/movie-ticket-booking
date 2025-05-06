@@ -1,21 +1,26 @@
-import { View, Text, FlatList, Dimensions } from "react-native";
+import { View, Text, FlatList, Dimensions, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Image } from "expo-image";
 import axios from "axios";
+import { Link } from "expo-router";
 
 const { width, height } = Dimensions.get("window");
-
+const imdbKey = process.env.EXPO_PUBLIC_IMDB_API_KEY;
 type rowProps = {
   name: string;
   fetchUrl: string;
 };
+
 type Movie = {
   id: number;
+  title: string;
+  overview: string;
   poster_path: string;
-};
-const Row = ({ name, fetchUrl }: rowProps) => {
-
+  backdrop_path: string;
   
+};
+
+const Row = ({ name, fetchUrl }: rowProps) => {
   const [data, setData] = useState<Movie[]>([]);
 
   useEffect(() => {
@@ -24,7 +29,8 @@ const Row = ({ name, fetchUrl }: rowProps) => {
         const response = await axios.get(fetchUrl, {
           headers: {
             accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYzBjOTU1Yzg0MDY1Zjc3NmZmYWM3OWMzNzcwYzQ3NyIsIm5iZiI6MTY1NTczOTI4OC4yMzcsInN1YiI6IjYyYjA5Mzk4N2YxZDgzMDUwZWRmN2RhZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.W7tZmXu0M6EfblsRUqVXVTVJrJgsZ4G2Ly2pQePlIEc'
+            Authorization: `Bearer ${imdbKey}`
+
           }
         });
         setData(response.data.results);
@@ -32,9 +38,10 @@ const Row = ({ name, fetchUrl }: rowProps) => {
         console.error("Fetch error:", error);
       }
     };
-
+  
     fetchData();
   }, [fetchUrl]);
+  
 
   return (
     <View>
@@ -44,19 +51,32 @@ const Row = ({ name, fetchUrl }: rowProps) => {
         horizontal
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <View className="relative mt-3 px-1">
-            <Image
-              style={{
-                height: height * 0.25,
-                width: width * 0.4,
-                margin: 5,
-                borderRadius: 10,
-              }}
-              source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }}
-              contentFit="cover"
-              transition={1000}
-            />
-          </View>
+          <Link
+            href={{
+              pathname: "/details/[id]",
+              params: {
+                id: item.id.toString(),
+                title: item.title,
+                description: item.overview,
+                image: `https://image.tmdb.org/t/p/w500${item.backdrop_path}`,
+              },
+            }}
+            asChild
+          >
+            <TouchableOpacity>
+              <Image
+                style={{
+                  height: height * 0.25,
+                  width: width * 0.4,
+                  margin: 5,
+                  borderRadius: 10,
+                }}
+                source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }}
+                contentFit="cover"
+                transition={1000}
+              />
+            </TouchableOpacity>
+          </Link>
         )}
       />
     </View>
@@ -64,3 +84,5 @@ const Row = ({ name, fetchUrl }: rowProps) => {
 };
 
 export default Row;
+
+
